@@ -1,0 +1,23 @@
+<div class="blog-article-container">
+  <%= link_to "← Retour au journal", blog_index_path, class: "back-link" %>
+  
+  <article class="blog-article-full">
+    <header class="article-header">
+      <div class="article-meta">
+        <span class="article-category"><%= @article.category %></span>
+        <span class="article-date"><%= @article.published_at&.strftime("%d %B %Y") %></span>
+      </div>
+      <h1 class="article-title"><%= @article.title %></h1>
+      <p class="article-author">Par <%= @article.author %></p>
+    </header>
+
+    <div class="article-content">
+      <%= simple_format(@article.content) %>
+    </div>
+  </article>
+  
+  <div class="article-navigation">
+    <%= link_to "← Retour au journal", blog_index_path, class: "nav-btn" %>
+  </div>
+</div>
+

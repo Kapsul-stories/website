@@ -1,0 +1,49 @@
+fr:
+  activerecord:
+    models:
+      article:
+        one: Article
+        other: Articles
+      admin:
+        one: Administrateur
+        other: Administrateurs
+    attributes:
+      article:
+        title: Titre
+        content: Contenu
+        category: Catégorie
+        published: Publié
+        published_at: Date de publication
+        author: Auteur
+      admin:
+        email: Email
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe
+    errors:
+      models:
+        article:
+          attributes:
+            title:
+              blank: ne peut pas être vide
+            content:
+              blank: ne peut pas être vide
+            category:
+              blank: ne peut pas être vide
+              inclusion: n'est pas dans la liste
+        admin:
+          attributes:
+            email:
+              blank: ne peut pas être vide
+              invalid: n'est pas valide
+              taken: est déjà utilisé
+            password:
+              blank: ne peut pas être vide
+              too_short: est trop court (minimum %{count} caractères)
+  helpers:
+    submit:
+      article:
+        create: Créer l'article
+        update: Mettre à jour l'article
+      admin:
+        create: Créer l'administrateur
+        update: Mettre à jour l'administrateur

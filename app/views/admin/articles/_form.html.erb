@@ -1,0 +1,40 @@
+<div class="admin-form-container">
+  <% if @article.errors.any? %>
+    <div class="alert alert-error">
+      <h3><%= pluralize(@article.errors.count, "erreur") %> empêche la sauvegarde :</h3>
+      <ul>
+        <% @article.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form_with model: [:admin, @article], class: "admin-form" do |f| %>
+    <div class="form-group">
+      <%= f.label :title, "Titre" %>
+      <%= f.text_field :title, required: true, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :category, "Catégorie" %>
+      <%= f.select :category, Article::CATEGORIES, { include_blank: "Sélectionnez une catégorie" }, 
+          required: true, class: "form-control" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :content, "Contenu" %>
+      <%= f.text_area :content, rows: 15, required: true, class: "form-control" %>
+    </div>
+
+    <div class="form-group checkbox-group">
+      <%= f.check_box :published, class: "form-checkbox" %>
+      <%= f.label :published, "Publier l'article" %>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit "Enregistrer", class: "btn-primary" %>
+      <%= link_to "Annuler", admin_articles_path, class: "btn-secondary" %>
+    </div>
+  <% end %>
+</div>

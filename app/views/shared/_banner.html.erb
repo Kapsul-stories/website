@@ -1,0 +1,51 @@
+<section class="hero" data-controller="parallax">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">
+        Les lieux ont des histoires.
+        <span class="hero-title-accent">Écoutez-les.</span>
+      </h1>
+      <p class="hero-subtitle">
+        Découvrez des anecdotes insolites géolocalisées autour de vous, révélées uniquement quand vous êtes au bon endroit. 
+      </p>
+      <div class="hero-cta">
+        <a class="btn-store btn-store-android" href="#">
+          <svg class="btn-store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.54c-.37-.2-.56-.58-.56-1.07V1.53c0-.49.2-.87.56-1.07l11.3 11.54L3.18 23.54zm1.4.88l12.63-7.27-2.8-2.86-9.83 10.13zm15.56-10.1c.55.31.84.73.84 1.18 0 .45-.29.87-.84 1.18l-2.54 1.46-3.08-3.14 3.08-3.14 2.54 1.46zM4.58-.42L14.4 9.71l2.8-2.86L4.58-.42z"/></svg>
+          <span class="btn-store-text">
+            <span class="btn-store-label">Disponible sur</span>
+            <span class="btn-store-name">Google Play</span>
+          </span>
+        </a>
+        <a class="btn-store btn-store-ios" href="#">
+          <svg class="btn-store-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          <span class="btn-store-text">
+            <span class="btn-store-label">Bientôt sur</span>
+            <span class="btn-store-name">App Store</span>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-parallax-target="phone">
+      <!-- Floating pills -->
+      <div class="pill pill-1" data-parallax-target="pill">🎭 Histoire</div>
+      <div class="pill pill-2" data-parallax-target="pill">🌿 Nature</div>
+      <div class="pill pill-3" data-parallax-target="pill">🎨 Art</div>
+      <div class="pill pill-4" data-parallax-target="pill">🍷 Gastronomie</div>
+      <div class="pill pill-5" data-parallax-target="pill">🏛️ Architecture</div>
+      <div class="pill pill-6" data-parallax-target="pill">❤️ Amour</div>
+      <div class="pill pill-7" data-parallax-target="pill">👻 Horreur</div>
+
+      <!-- Phone mockup -->
+      <div class="phone-mockup">
+<div class="phone-screen">
+          <%= image_tag "img-home-smartphone.jpeg", class: "phone-screen-img", alt: "Kapsul app" %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative background elements -->
+  <div class="hero-bg-gradient"></div>
+  <div class="hero-bg-dots"></div>
+</section>

@@ -1,0 +1,41 @@
+<div class="blog-container">
+  <div class="blog-header">
+    <h1>Journal Kapsul</h1>
+    <p class="blog-subtitle">Découvrez nos guides, conseils et actualités</p>
+  </div>
+
+  <div class="blog-categories">
+    <%= link_to "Tous les articles", blog_index_path, class: "category-btn #{params[:category].blank? ? 'active' : ''}" %>
+    <% @categories.each do |category| %>
+      <%= link_to category, blog_index_path(category: category), class: "category-btn #{params[:category] == category ? 'active' : ''}" %>
+    <% end %>
+  </div>
+
+  <div class="blog-articles">
+    <% if @articles.any? %>
+      <% @articles.each do |article| %>
+        <article class="blog-article-card">
+          <div class="article-meta">
+            <span class="article-category"><%= article.category %></span>
+            <span class="article-date"><%= article.published_at&.strftime("%d %B %Y") %></span>
+          </div>
+          <h2 class="article-title">
+            <%= link_to article.title, blog_path(article) %>
+          </h2>
+          <p class="article-excerpt">
+            <%= truncate(article.content, length: 200) %>
+          </p>
+          <div class="article-footer">
+            <span class="article-author">Par <%= article.author %></span>
+            <%= link_to "Lire la suite →", blog_path(article), class: "read-more-link" %>
+          </div>
+        </article>
+      <% end %>
+    <% else %>
+      <div class="no-articles">
+        <p>Aucun article pour le moment. Revenez bientôt !</p>
+      </div>
+    <% end %>
+  </div>
+</div>
+

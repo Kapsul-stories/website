@@ -1,0 +1,138 @@
+/* ===========================
+   Features Section
+   =========================== */
+
+.features {
+  padding: 80px 0 100px;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.features-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.3;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  letter-spacing: -0.02em;
+}
+
+/* Marker / felt-pen underline */
+.marker-underline {
+  position: relative;
+  white-space: nowrap;
+}
+
+.marker-underline::after {
+  content: '';
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  bottom: 2px;
+  height: 14px;
+  background: linear-gradient(135deg, rgba(103, 11, 255, 0.2) 0%, rgba(168, 85, 247, 0.25) 100%);
+  border-radius: 4px 8px 6px 10px;
+  z-index: -1;
+  transform: rotate(-0.8deg) skewX(-4deg);
+}
+
+/* Cards grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 32px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(103, 11, 255, 0.08);
+  border-color: rgba(103, 11, 255, 0.1);
+}
+
+.feature-icon {
+  font-size: 40px;
+  margin-bottom: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f5ff;
+  border-radius: 18px;
+}
+.feature-illu {
+  max-width: 200px;
+  max-height: 200px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.feature-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 12px;
+}
+
+.feature-card-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+
+@media (max-width: 1024px) {
+  .features-title {
+    font-size: 30px;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    padding: 60px 0 80px;
+  }
+
+  .features-title {
+    font-size: 26px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .feature-card {
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-title {
+    font-size: 22px;
+  }
+
+  .marker-underline::after {
+    height: 10px;
+  }
+}

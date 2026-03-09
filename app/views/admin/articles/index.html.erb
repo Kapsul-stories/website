@@ -1,0 +1,59 @@
+<div class="admin-container">
+  <div class="admin-header">
+    <h1>Gestion des articles</h1>
+    <div class="admin-actions">
+      <%= link_to "Nouvel article", new_admin_article_path, class: "btn-primary" %>
+      <%= link_to "Voir le blog", blog_index_path, class: "btn-secondary" %>
+      <%= link_to "Se déconnecter", admin_logout_path, method: :delete, class: "btn-danger" %>
+    </div>
+  </div>
+
+  <% if flash[:notice] %>
+    <div class="alert alert-success">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+
+  <div class="admin-table">
+    <% if @articles.any? %>
+      <table>
+        <thead>
+          <tr>
+            <th>Titre</th>
+            <th>Catégorie</th>
+            <th>Auteur</th>
+            <th>Statut</th>
+            <th>Date de publication</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @articles.each do |article| %>
+            <tr>
+              <td><%= article.title %></td>
+              <td><%= article.category %></td>
+              <td><%= article.author %></td>
+              <td>
+                <span class="status-badge <%= article.published ? 'published' : 'draft' %>">
+                  <%= article.published ? 'Publié' : 'Brouillon' %>
+                </span>
+              </td>
+              <td><%= article.published_at&.strftime("%d/%m/%Y %H:%M") || '-' %></td>
+              <td class="actions">
+                <%= link_to "Modifier", edit_admin_article_path(article), class: "btn-edit" %>
+                <%= button_to "Supprimer", admin_article_path(article), method: :delete, 
+                    data: { confirm: "Êtes-vous sûr ?" }, class: "btn-delete" %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <% else %>
+      <div class="no-data">
+        <p>Aucun article pour le moment.</p>
+        <%= link_to "Créer le premier article", new_admin_article_path, class: "btn-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

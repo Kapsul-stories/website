@@ -1,0 +1,11 @@
+<nav class="navbar">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "logo-kapsul-nb.png", alt: "Kapsul" %>
+  <% end %>
+  <ul class="navbar-menu">
+    <li><%= link_to "À propos", about_path, class: "navbar-link" %></li>
+    <li><%= link_to "Comment ça marche", product_path, class: "navbar-link" %></li>
+    <li><%= link_to "Journal", blog_index_path, class: "navbar-link" %></li>
+    <li><%= link_to "Télécharger", "#", class: "navbar-btn" %></li>
+  </ul>
+</nav>

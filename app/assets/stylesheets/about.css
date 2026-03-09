@@ -1,0 +1,121 @@
+/* ===========================
+   About Section
+   =========================== */
+
+.about-section {
+  padding: 80px 20px 100px;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-container h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin: 0 0 40px;
+  letter-spacing: -0.02em;
+}
+
+.about-container h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.3;
+  margin: 48px 0 24px;
+  letter-spacing: -0.01em;
+}
+
+.about-container p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #64748b;
+  margin: 0 0 24px;
+}
+
+/* --- Blocs texte / visuel --- */
+
+.about-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 96px;
+}
+
+.about-block--reverse {
+  direction: rtl;
+}
+
+.about-block--reverse > * {
+  direction: ltr;
+}
+
+.about-block-content h1 {
+  margin-top: 0;
+}
+
+.about-block-content h2 {
+  margin-top: 0;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.about-img--natural {
+  aspect-ratio: unset;
+  height: auto;
+  object-fit: unset;
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 20px 80px;
+  }
+
+  .about-container h1 {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .about-container h2 {
+    font-size: 26px;
+    margin: 40px 0 20px;
+  }
+
+  .about-container p {
+    font-size: 16px;
+  }
+
+  .about-block {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  .about-block--reverse {
+    direction: ltr;
+  }
+
+  .about-block--reverse .about-block-visual {
+    order: -1;
+  }
+
+  .about-img {
+    border-radius: 16px;
+  }
+}

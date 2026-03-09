@@ -1,0 +1,432 @@
+/* ===========================
+   Personas / Carousel Section
+   =========================== */
+
+.personas {
+  padding: 40px 0 100px;
+}
+
+.personas-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.personas-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 50px;
+  letter-spacing: -0.02em;
+}
+
+/* --- Carousel --- */
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-slide {
+  min-width: 100%;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+/* --- Persona Cards --- */
+
+.persona-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 24px;
+  padding: 48px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.3s ease;
+}
+
+.persona-card:hover {
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
+}
+
+.persona-card-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.persona-card-illu {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  margin-bottom: 16px;
+}
+
+.persona-card-label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 12px;
+}
+
+.persona-card--commerce .persona-card-label {
+  color: #6C63FF;
+}
+
+.persona-card--collectivite .persona-card-label {
+  color: #FF6584;
+}
+
+.persona-card--ambassadeur .persona-card-label {
+  color: #f59e0b;
+}
+
+.persona-card-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1a1a2e;
+  margin: 0 0 16px;
+  letter-spacing: -0.02em;
+}
+
+.persona-card-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0 0 32px;
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- CTA per persona --- */
+
+.persona-card-cta {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.persona-card-cta:hover {
+  transform: translateY(-2px);
+}
+
+.persona-card-cta--commerce {
+  background: #6C63FF;
+  box-shadow: 0 4px 16px rgba(108, 99, 255, 0.3);
+}
+
+.persona-card-cta--commerce:hover {
+  box-shadow: 0 8px 24px rgba(108, 99, 255, 0.4);
+}
+
+.persona-card-cta--collectivite {
+  background: #FF6584;
+  box-shadow: 0 4px 16px rgba(255, 101, 132, 0.3);
+}
+
+.persona-card-cta--collectivite:hover {
+  box-shadow: 0 8px 24px rgba(255, 101, 132, 0.4);
+}
+
+.persona-card-cta--ambassadeur {
+  background: #f59e0b;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+}
+
+.persona-card-cta--ambassadeur:hover {
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
+}
+
+/* --- Carousel Navigation --- */
+
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 36px;
+}
+
+.carousel-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #e2e8f0;
+  background: white;
+  color: #1a1a2e;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.carousel-btn:hover {
+  border-color: #6C63FF;
+  color: #6C63FF;
+  background: rgba(108, 99, 255, 0.04);
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: #e2e8f0;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot--active {
+  background: #6C63FF;
+  transform: scale(1.2);
+}
+
+.carousel-dot:hover:not(.carousel-dot--active) {
+  background: #cbd5e1;
+}
+
+/* ===========================
+   Persona Pages (commercants, collectivites, ambassadeurs)
+   =========================== */
+
+.persona-section {
+  padding: 80px 20px 100px;
+}
+
+.persona-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.persona-label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 20px;
+}
+
+.persona-label--commerce  { color: #6C63FF; }
+.persona-label--collectivite { color: #FF6584; }
+.persona-label--ambassadeur  { color: #f59e0b; }
+
+.persona-container h1 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.2;
+  margin: 0 0 40px;
+  letter-spacing: -0.02em;
+}
+
+.persona-container h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.3;
+  margin: 56px 0 24px;
+  letter-spacing: -0.01em;
+}
+
+.persona-container p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #64748b;
+  margin: 0 0 24px;
+}
+
+/* --- Offer grid --- */
+
+.persona-offer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 0 0 56px;
+}
+
+.persona-offer-card {
+  background: white;
+  border-radius: 20px;
+  padding: 36px 28px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.persona-offer-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.persona-offer-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.persona-offer-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0;
+}
+
+/* --- CTA block --- */
+
+.persona-cta-block {
+  margin-top: 72px;
+  padding: 56px 48px;
+  background: white;
+  border-radius: 24px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+.persona-cta-block h2 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.persona-cta-block p {
+  max-width: 560px;
+}
+
+.persona-cta {
+  display: inline-block;
+  padding: 14px 32px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.persona-cta:hover {
+  transform: translateY(-2px);
+}
+
+.persona-cta--commerce {
+  background: #6C63FF;
+  box-shadow: 0 4px 16px rgba(108, 99, 255, 0.3);
+}
+
+.persona-cta--commerce:hover {
+  box-shadow: 0 8px 24px rgba(108, 99, 255, 0.4);
+}
+
+.persona-cta--collectivite {
+  background: #FF6584;
+  box-shadow: 0 4px 16px rgba(255, 101, 132, 0.3);
+}
+
+.persona-cta--collectivite:hover {
+  box-shadow: 0 8px 24px rgba(255, 101, 132, 0.4);
+}
+
+.persona-cta--ambassadeur {
+  background: #f59e0b;
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.3);
+}
+
+.persona-cta--ambassadeur:hover {
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.4);
+}
+
+/* ===========================
+   Responsive
+   =========================== */
+
+@media (max-width: 768px) {
+  .personas {
+    padding: 40px 0 80px;
+  }
+
+  .personas-title {
+    font-size: 28px;
+  }
+
+  .carousel-slide {
+    padding: 0 16px;
+  }
+
+  .persona-card {
+    padding: 32px 24px;
+  }
+
+  .persona-card-title {
+    font-size: 22px;
+  }
+
+  .persona-card-text {
+    font-size: 15px;
+  }
+
+  .persona-section {
+    padding: 60px 20px 80px;
+  }
+
+  .persona-container h1 {
+    font-size: 36px;
+    margin-bottom: 32px;
+  }
+
+  .persona-container h2 {
+    font-size: 26px;
+    margin: 40px 0 20px;
+  }
+
+  .persona-container p {
+    font-size: 16px;
+  }
+
+  .persona-offer-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .persona-cta-block {
+    padding: 36px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .personas-title {
+    font-size: 24px;
+  }
+
+  .persona-card {
+    padding: 28px 20px;
+  }
+
+  .persona-card-title {
+    font-size: 20px;
+  }
+
+  .persona-card-cta {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}

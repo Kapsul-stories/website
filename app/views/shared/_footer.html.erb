@@ -1,0 +1,36 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <%= link_to root_path, class: "footer-logo-link" do %>
+        <%= image_tag "kapsul-logo-blanc.png", alt: "Kapsul", class: "footer-logo" %>
+      <% end %>
+      <p class="footer-tagline">Les lieux ont des histoires. Écoutez-les.</p>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Sitemap</h4>
+      <ul class="footer-links">
+        <li><%= link_to "Accueil", root_path %></li>
+        <li><%= link_to "À propos", about_path %></li>
+        <li><%= link_to "Comment ça marche", product_path %></li>
+        <li><%= link_to "Commerçants", commercants_path %></li>
+        <li><%= link_to "Collectivités", collectivites_path %></li>
+        <li><%= link_to "Ambassadeurs", ambassadeurs_path %></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4 class="footer-col-title">Légal</h4>
+      <ul class="footer-links">
+        <li><%= link_to "CGU", "#" %></li>
+        <li><%= link_to "Politique de confidentialité", "#" %></li>
+        <li><%= link_to "Contact", "#" %></li>
+        <li><%= link_to "Admin", new_admin_session_path %></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; <%= Date.today.year %> Kapsul. Tous droits réservés.</p>
+  </div>
+</footer>

@@ -1,0 +1,29 @@
+<div class="admin-login-container">
+  <div class="admin-login-box">
+    <h1>Connexion Admin</h1>
+    
+    <% if flash[:alert] %>
+      <div class="alert alert-error">
+        <%= flash[:alert] %>
+      </div>
+    <% end %>
+    
+    <%= form_with url: admin_sessions_path, method: :post, class: "admin-login-form" do |f| %>
+      <div class="form-group">
+        <%= label_tag :email, "Email" %>
+        <%= email_field_tag :email, nil, required: true, autofocus: true, class: "form-control" %>
+      </div>
+      
+      <div class="form-group">
+        <%= label_tag :password, "Mot de passe" %>
+        <%= password_field_tag :password, nil, required: true, class: "form-control" %>
+      </div>
+      
+      <div class="form-actions">
+        <%= submit_tag "Se connecter", class: "btn-primary" %>
+        <%= link_to "Retour à l'accueil", root_path, class: "btn-secondary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+

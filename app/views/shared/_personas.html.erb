@@ -1,0 +1,59 @@
+<section class="personas" data-controller="carousel">
+  <div class="personas-container">
+    <h2 class="personas-title">Rejoignez la <span class="marker-underline">communauté</span></h2>
+
+    <div class="carousel">
+      <div class="carousel-track" data-carousel-target="track">
+        <!-- Slide 1 : Commerçants -->
+        <div class="carousel-slide" data-carousel-target="slide">
+          <div class="persona-card persona-card--commerce">
+            <%= image_tag "illu/home-carrousel-1-commerces.png", class: "persona-card-illu" %>
+            <h3 class="persona-card-label">Commerçants</h3>
+            <h4 class="persona-card-title">Racontez votre histoire autrement</h4>
+            <p class="persona-card-text">
+              Votre boutique a une histoire, une âme, un savoir-faire unique. Transformez votre vitrine en expérience sonore et créez un lien authentique avec vos visiteurs.
+            </p>
+            <%= link_to "Découvrir l'offre Pro", commercants_path, class: "persona-card-cta persona-card-cta--commerce" %>
+          </div>
+        </div>
+
+        <!-- Slide 2 : Collectivités -->
+        <div class="carousel-slide" data-carousel-target="slide">
+          <div class="persona-card persona-card--collectivite">
+            <%= image_tag "illu/home-carrousel-2-collectivites.png", class: "persona-card-illu" %>
+            <h3 class="persona-card-label">Collectivités</h3>
+            <h4 class="persona-card-title">Valorisez votre patrimoine</h4>
+            <p class="persona-card-text">
+              Faites rayonner votre territoire grâce à des parcours audio immersifs. Offrez aux habitants et aux touristes une nouvelle façon de découvrir votre commune.
+            </p>
+            <%= link_to "Voir les partenariats", collectivites_path, class: "persona-card-cta persona-card-cta--collectivite" %>
+          </div>
+        </div>
+
+        <!-- Slide 3 : Ambassadeurs -->
+        <div class="carousel-slide" data-carousel-target="slide">
+          <div class="persona-card persona-card--ambassadeur">
+            <div class="persona-card-icon">🌟</div>
+            <h3 class="persona-card-label">Ambassadeurs</h3>
+            <h4 class="persona-card-title">Engagez-vous localement</h4>
+            <p class="persona-card-text">
+              Vous souhaitez contribuer à enrichir les récits de votre quartier ? Devenez ambassadeur Kapsul et participez à faire vivre la mémoire collective.
+            </p>
+            <%= link_to "Rejoindre le comité éditorial", ambassadeurs_path, class: "persona-card-cta persona-card-cta--ambassadeur" %>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation -->
+      <div class="carousel-nav">
+        <button class="carousel-btn carousel-btn--prev" data-action="carousel#prev" aria-label="Précédent">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="carousel-dots" data-carousel-target="dots"></div>
+        <button class="carousel-btn carousel-btn--next" data-action="carousel#next" aria-label="Suivant">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
