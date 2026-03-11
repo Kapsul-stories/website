@@ -7,27 +7,35 @@
     L’application fonctionne en deux temps : écouter des capsules et en créer.</p>
     
     <h2>Vous voulez écouter ?</h2>
-    <h3>Approchez-vous</h3>
-    
-    <p>Explorez la carte et rendez-vous à moins de 50 mètres d’une capsule.
-    
-    (Screenshot carte ici)</p>
-    
-    <h3>2. Débloquez l'écoute</h3>
-    
-    <p>Une fois sur place, la capsule s’ouvre. Vous pouvez l’écouter immédiatement.
-    
-    (Screenshot écran capsule ici)</p>
-    
-    <h3>3. Choisissez vos univers</h3>
-    
-    <p>Histoire, architecture, art, horreur, gastronomie, nature… Suivez vos envies.
-    
-    (Screenshot filtres / catégories ici)</p>
-    
-    <h3>4. Gardez-là</h3>
-    
-    <p>Une capsule débloquée reste accessible. Vous pouvez la réécouter plus tard.</p>
+
+    <div class="product-steps">
+      <div class="product-step">
+        <%= image_tag "product/listen1.jpeg", class: "product-step-img", alt: "Explorez la carte" %>
+        <div class="product-step-content">
+          <span class="product-step-number">1</span>
+          <h3 class="product-step-title">Approchez-vous</h3>
+          <p class="product-step-text">Explorez la carte et rendez-vous à moins de 50 mètres d’une capsule.</p>
+        </div>
+      </div>
+
+      <div class="product-step">
+        <%= image_tag "product/listen2.jpeg", class: "product-step-img", alt: "Débloquez la capsule" %>
+        <div class="product-step-content">
+          <span class="product-step-number">2</span>
+          <h3 class="product-step-title">Débloquez l’écoute</h3>
+          <p class="product-step-text">Une fois sur place, la capsule s’ouvre. Vous pouvez l’écouter immédiatement.</p>
+        </div>
+      </div>
+
+      <div class="product-step">
+        <%= image_tag "product/listen3.jpeg", class: "product-step-img", alt: "Gardez la capsule" %>
+        <div class="product-step-content">
+          <span class="product-step-number">3</span>
+          <h3 class="product-step-title">Gardez-la</h3>
+          <p class="product-step-text">Une capsule débloquée reste accessible. Vous pouvez la réécouter plus tard.</p>
+        </div>
+      </div>
+    </div>
     
     <h2>Vous voulez raconter ?</h2>
     

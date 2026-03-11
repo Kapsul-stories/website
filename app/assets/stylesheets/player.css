@@ -187,19 +187,50 @@
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.player-lock {
+.player-author-block {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  color: #94a3b8;
-  font-weight: 500;
+  gap: 8px;
+}
+
+.player-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
 }
 
 .player-author {
   font-size: 12px;
   color: #94a3b8;
   font-style: italic;
+}
+
+.player-nav {
+  display: flex;
+  gap: 4px;
+}
+
+.player-nav-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #f8fafc;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.player-nav-btn:hover {
+  background: rgba(103, 11, 255, 0.06);
+  border-color: rgba(103, 11, 255, 0.2);
+  color: #670BFF;
 }
 
 /* ===========================

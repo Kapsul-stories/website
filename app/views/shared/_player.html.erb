@@ -7,14 +7,14 @@
 
     <div class="player-card" data-controller="player">
       <div class="player-card-header">
-        <span class="player-badge">📍 Grenoble · Museum d'Histoire Naturelle</span>
-        <span class="player-category">🌿 Nature</span>
+        <span class="player-badge" data-player-target="badge">📍 Grenoble · Muséum d'Histoire Naturelle</span>
+        <span class="player-category" data-player-target="category">🌿 Nature</span>
       </div>
 
       <div class="player-card-body">
         <div class="player-info">
-          <h3 class="player-capsule-title">Un éléphant plus vrai que nature</h3>
-          <span class="player-duration">2 min 34</span>
+          <h3 class="player-capsule-title" data-player-target="title">Un éléphant plus vrai que nature</h3>
+          <span class="player-duration" data-player-target="duration">2 min 34</span>
         </div>
 
         <div class="player-controls">
@@ -38,11 +38,18 @@
       </div>
 
       <div class="player-card-footer">
-        <span class="player-lock">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Débloquée à moins de 50m du lieu
-        </span>
-        <span class="player-author">par Marie T.</span>
+        <div class="player-author-block">
+          <%= image_tag "avatar/avatar1.jpg", class: "player-avatar", alt: "Avatar", "data-player-target": "avatar" %>
+          <span class="player-author" data-player-target="author">Marie T.</span>
+        </div>
+        <div class="player-nav">
+          <button class="player-nav-btn" data-action="click->player#prev" aria-label="Précédent">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+          </button>
+          <button class="player-nav-btn" data-action="click->player#next" aria-label="Suivant">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zm2.5-6 5.5 4V8zM16 6h2v12h-2z"/></svg>
+          </button>
+        </div>
       </div>
     </div>
   </div>

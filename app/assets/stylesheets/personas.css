@@ -256,6 +256,30 @@
   margin: 0 0 24px;
 }
 
+/* --- Intro block (text + image) --- */
+
+.persona-intro-block {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  margin-bottom: 72px;
+}
+
+.persona-intro-text h1 {
+  margin-top: 12px;
+}
+
+.persona-intro-img {
+  width: 100%;
+  max-width: 440px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
 /* --- Offer grid --- */
 
 .persona-offer-grid {
@@ -274,8 +298,19 @@
 }
 
 .persona-offer-icon {
-  font-size: 32px;
-  margin-bottom: 16px;
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 101, 132, 0.08);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.persona-offer-icon svg {
+  display: block;
+  flex-shrink: 0;
 }
 
 .persona-offer-card h3 {
@@ -400,6 +435,12 @@
 
   .persona-container p {
     font-size: 16px;
+  }
+
+  .persona-intro-block {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
   }
 
   .persona-offer-grid {

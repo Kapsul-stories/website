@@ -37,6 +37,65 @@
 }
 
 /* ===========================
+   Product Steps
+   =========================== */
+
+.product-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin: 0 0 56px;
+}
+
+.product-step {
+  background: white;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.product-step-img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  display: block;
+}
+
+.product-step-content {
+  padding: 24px 24px 28px;
+}
+
+.product-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #670BFF 0%, #a855f7 100%);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.product-step-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin: 0 0 8px;
+  letter-spacing: -0.01em;
+}
+
+.product-step-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ===========================
    Responsive
    =========================== */
 
@@ -57,5 +116,14 @@
 
   .product-container p {
     font-size: 16px;
+  }
+
+  .product-steps {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+
+  .product-step-img {
+    aspect-ratio: 4 / 3;
   }
 }
