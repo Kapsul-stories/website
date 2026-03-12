@@ -129,8 +129,8 @@
   }
 
   .product-steps--four {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 100%;
+    grid-template-columns: 1fr;
+    max-width: 400px;
   }
 
   .product-step-img {
