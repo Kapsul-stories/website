@@ -47,6 +47,10 @@
   margin: 0 0 56px;
 }
 
+.product-steps--four {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .product-step {
   background: white;
   border-radius: 16px;
@@ -58,8 +62,9 @@
 .product-step-img {
   width: 100%;
   aspect-ratio: 9 / 16;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
+  background: #f4f4f8;
 }
 
 .product-step-content {
@@ -121,6 +126,11 @@
   .product-steps {
     grid-template-columns: 1fr;
     max-width: 400px;
+  }
+
+  .product-steps--four {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
   }
 
   .product-step-img {
