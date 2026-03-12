@@ -113,6 +113,12 @@
   .community-headline {
     font-size: 20px;
   }
+
+  .community-cta {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
 }
 
 @media (max-width: 480px) {
@@ -122,10 +128,5 @@
 
   .community-headline {
     font-size: 18px;
-  }
-
-  .community-cta {
-    width: 100%;
-    text-align: center;
   }
 }
