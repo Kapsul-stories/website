@@ -5,28 +5,28 @@ const TRACKS = [
     badge:    "📍 Grenoble · Muséum d'Histoire Naturelle",
     category: "🌿 Nature",
     title:    "Un éléphant plus vrai que nature",
-    duration: "2 min 34",
-    author:   "Marie T.",
+    duration: "1 min 25",
+    author:   "Robert M.",
     avatar:   "/assets/avatar/avatar1.jpg",
-    seconds:  154,
+    audio:    "/audio/track1.mp3",
   },
   {
-    badge:    "📍 Lyon · Place des Jacobins",
+    badge:    "📍 Grenoble · 2 rue Hébert",
     category: "🏛️ Architecture",
-    title:    "La légende de la fontaine aux quatre fleuves",
+    title:    "Poma 2000, le futur inachevé",
     duration: "1 min 58",
-    author:   "Thomas R.",
+    author:   "Sophie38",
     avatar:   "/assets/avatar/avatar3.jpg",
-    seconds:  118,
+    audio:    "/audio/track2.mp3",
   },
   {
-    badge:    "📍 Lyon · Croix-Rousse",
+    badge:    "📍 Grenoble · place Grenette",
     category: "🧵 Histoire",
-    title:    "Les canuts, tisserands de soie",
-    duration: "3 min 12",
-    author:   "Sophie L.",
+    title:    "L'homme guillotiné deux fois'",
+    duration: "1 min 02",
+    author:   "Pauline",
     avatar:   "/assets/avatar/avatar2.jpg",
-    seconds:  192,
+    audio:    "/audio/track3.mp3",
   },
 ]
 
@@ -35,14 +35,14 @@ export default class extends Controller {
 
   connect() {
     this.playing = false
-    this.progress = 0
     this.currentIndex = 0
-    this.totalSeconds = TRACKS[0].seconds
-    this.interval = null
+    this.audio = new Audio(TRACKS[0].audio)
+    this.bindAudioEvents()
   }
 
   disconnect() {
-    this.stop()
+    this.audio.pause()
+    this.audio.src = ""
   }
 
   toggle() {
@@ -69,48 +69,54 @@ export default class extends Controller {
     this.durationTarget.textContent = track.duration
     this.authorTarget.textContent   = track.author
     this.avatarTarget.src           = track.avatar
-    this.totalSeconds               = track.seconds
+    this.audio.src                  = track.audio
+    this.timeTarget.textContent     = "0:00"
+    this.barTargets.forEach(bar => bar.classList.remove("played", "active"))
   }
 
   play() {
     this.playing = true
-    this.playIconTarget.style.display = "none"
+    this.playIconTarget.style.display  = "none"
     this.pauseIconTarget.style.display = "block"
-
-    this.interval = setInterval(() => {
-      this.progress += 1
-      if (this.progress >= this.totalSeconds) {
-        this.stop()
-        return
-      }
-      this.updateTime()
-      this.updateBars()
-    }, 1000)
+    this.audio.play()
   }
 
   pause() {
     this.playing = false
-    this.playIconTarget.style.display = "block"
+    this.playIconTarget.style.display  = "block"
     this.pauseIconTarget.style.display = "none"
-    clearInterval(this.interval)
+    this.audio.pause()
     this.barTargets.forEach(bar => bar.classList.remove("active"))
   }
 
   stop() {
     this.pause()
-    this.progress = 0
+    this.audio.currentTime = 0
     this.timeTarget.textContent = "0:00"
     this.barTargets.forEach(bar => bar.classList.remove("played", "active"))
   }
 
+  bindAudioEvents() {
+    this.audio.addEventListener("timeupdate", () => {
+      if (!this.audio.duration) return
+      this.updateTime()
+      this.updateBars()
+    })
+
+    this.audio.addEventListener("ended", () => {
+      this.stop()
+    })
+  }
+
   updateTime() {
-    const m = Math.floor(this.progress / 60)
-    const s = this.progress % 60
+    const t = Math.floor(this.audio.currentTime)
+    const m = Math.floor(t / 60)
+    const s = t % 60
     this.timeTarget.textContent = `${m}:${s.toString().padStart(2, "0")}`
   }
 
   updateBars() {
-    const ratio = this.progress / this.totalSeconds
+    const ratio = this.audio.currentTime / this.audio.duration
     const total = this.barTargets.length
     const playedCount = Math.floor(ratio * total)
 
