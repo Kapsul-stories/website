@@ -7,7 +7,7 @@ const TRACKS = [
     title:    "Un éléphant plus vrai que nature",
     duration: "1 min 25",
     author:   "Robert M.",
-    avatar:   "/assets/avatar/avatar1.jpg",
+    avatar:   "/avatars/avatar1.jpg",
     audio:    "/audio/track1.mp3",
   },
   {
@@ -16,7 +16,7 @@ const TRACKS = [
     title:    "Poma 2000, le futur inachevé",
     duration: "1 min 58",
     author:   "Sophie38",
-    avatar:   "/assets/avatar/avatar3.jpg",
+    avatar:   "/avatars/avatar3.jpg",
     audio:    "/audio/track2.mp3",
   },
   {
@@ -25,7 +25,7 @@ const TRACKS = [
     title:    "L'homme guillotiné deux fois'",
     duration: "1 min 02",
     author:   "Pauline",
-    avatar:   "/assets/avatar/avatar2.jpg",
+    avatar:   "/avatars/avatar2.jpg",
     audio:    "/audio/track3.mp3",
   },
 ]
