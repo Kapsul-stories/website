@@ -23,4 +23,6 @@ Rails.application.routes.draw do
   get "commercants", to: "pages#commercants"
   get "collectivites", to: "pages#collectivites"
   get "ambassadeurs", to: "pages#ambassadeurs"
+  get "cgu", to: "pages#cgu"
+  get "confidentialite", to: "pages#confidentialite"
 end
