@@ -2,13 +2,13 @@ import { Controller } from "@hotwired/stimulus"
 
 const TRACKS = [
   {
-    badge:    "📍 Grenoble · Muséum d'Histoire Naturelle",
-    category: "🌿 Nature",
-    title:    "Un éléphant plus vrai que nature",
-    duration: "1 min 25",
-    author:   "Robert M.",
-    avatar:   "/avatars/avatar1.jpg",
-    audio:    "/audio/track1.mp3",
+    badge:    "📍 Grenoble · cours Berriat",
+    category: "🧵 Histoire",
+    title:    "Seul dans le noir, il fait ses comptes",
+    duration: "49 sec",
+    author:   "CatherineMichoux",
+    avatar:   "/avatars/avatar5.jpg",
+    audio:    "/audio/track3.mp3",
   },
   {
     badge:    "📍 Grenoble · 2 rue Hébert",
@@ -20,13 +20,13 @@ const TRACKS = [
     audio:    "/audio/track2.mp3",
   },
   {
-    badge:    "📍 Grenoble · place Grenette",
-    category: "🧵 Histoire",
-    title:    "L'homme guillotiné deux fois'",
-    duration: "1 min 02",
-    author:   "Pauline",
-    avatar:   "/avatars/avatar2.jpg",
-    audio:    "/audio/track3.mp3",
+    badge:    "📍 Grenoble · Muséum d'Histoire Naturelle",
+    category: "🌿 Nature",
+    title:    "Un éléphant plus vrai que nature",
+    duration: "1 min 25",
+    author:   "Robert",
+    avatar:   "/avatars/avatar1.jpg",
+    audio:    "/audio/track1.mp3",
   },
 ]
 
